@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a problem with Shizuku Auto Start
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please fill in the details below — most restart problems
+        depend on the phone model, Android version and battery settings.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem, including what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Lock the phone
+        2. Wait ...
+        3. Unlock
+        4. Shizuku is ...
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Shown at the bottom of the app / in Android settings.
+      placeholder: "1.6.3"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: "e.g. Pixel 7, Android 14 (SDK 34)"
+    validations:
+      required: true
+  - type: input
+    id: shizuku-version
+    attributes:
+      label: Shizuku manager and version
+      description: Which manager (original Shizuku, Shizuku Next, Shizuku+, Sui, ...) and its version.
+      placeholder: "e.g. Shizuku Next 14.0.39-next"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logcat (optional but very helpful)"
+      description: |
+        `adb logcat -s ShizukuHelper` while locking and unlocking the phone.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: "I tapped \"Disable Battery Restrictions\" and allowed notifications."
+          required: true
+        - label: I am using the latest release.
+          required: true

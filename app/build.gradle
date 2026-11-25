@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.helper.shizukuautostart'
+    compileSdk 36
+    buildToolsVersion "35.0.0"
+
+    defaultConfig {
+        applicationId "com.helper.shizukuautostart"
+        minSdk 26
+        targetSdk 34
+        versionCode 10
+        versionName "1.6.3"
+    }
+
+    def hasReleaseKeystore = project.hasProperty('RELEASE_STORE_FILE')
+
+    signingConfigs {
+        release {
+            if (hasReleaseKeystore) {
+                storeFile file(project.property('RELEASE_STORE_FILE'))
+                storePassword project.property('RELEASE_STORE_PASSWORD')
+                keyAlias project.property('RELEASE_KEY_ALIAS')
+                keyPassword project.property('RELEASE_KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Sign with a private release key when the four RELEASE_* properties are set.
+            // Otherwise fall back to the debug key so `assembleRelease` always produces an
+            // installable APK (the same behaviour as the GitHub workflow).
+            signingConfig hasReleaseKeystore ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.dynamicanimation:dynamicanimation:1.1.0"
+    implementation "com.google.android.material:material:1.13.0"
+
+    implementation "dev.rikka.shizuku:api:13.1.5"
+    implementation "dev.rikka.shizuku:provider:13.1.5"
+
+    testImplementation "junit:junit:4.13.2"
+}

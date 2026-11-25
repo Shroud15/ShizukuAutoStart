@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Original Shizuku issues
+    url: https://github.com/RikkaApps/Shizuku/issues
+    about: Problems with the original Shizuku app or its ADB service belong upstream.
+  - name: Shizuku Next issues
+    url: https://github.com/rushiranpise/Shizuku-Next/issues
+    about: Problems with Shizuku Next (the service, ADB, wireless debugging) belong upstream.

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shizuku Auto Start</string>
+    <string name="tagline">Keeps your Shizuku service alive after every unlock. Works with original Shizuku, Shizuku Next, Shizuku+ and other forks.</string>
+
+    <string name="toggle_theme">Switch between dark and light mode</string>
+    <string name="how_to_use">How to use</string>
+    <string name="how_to_use_title">How to use</string>
+    <string name="ok">OK</string>
+    <string name="how_to_use_body">1. Install your Shizuku app: original Shizuku, Shizuku Next, Shizuku+ or any Shizuku-compatible fork.\n\n2. Leave &quot;Auto restart after unlock&quot; switched on. The helper asks your Shizuku app to start after every unlock and keeps retrying until the Shizuku service is actually running.\n\n3. If your fork needs a token for its START intent, paste it in the Auth token card and tap &quot;Save token&quot;.\n\n4. Tap &quot;Disable Battery Restrictions&quot; and allow it, so the system does not kill the helper. The button disappears once the restriction is gone.\n\n5. If your Shizuku app has its own watchdog, the Watcher section appears. Keep &quot;Also wake Shizuku\'s watchdog on each retry&quot; on to wake that watchdog too, or turn it off so this app does the whole restart itself. &quot;Wake the watcher now&quot; wakes it once, immediately.\n\nOriginal Shizuku has no automatic start entry point. If your manager cannot be started by another app, the helper notification opens the Shizuku app so you can tap Start once.</string>
+
+    <string name="status_label">Shizuku service</string>
+    <string name="status_running">Running</string>
+    <string name="status_stopped">Not running</string>
+    <string name="status_disabled">Not running · helper disabled</string>
+    <string name="status_dot_on">Shizuku service running</string>
+    <string name="status_dot_off">Shizuku service not running</string>
+    <string name="dot_says_on">Shizuku is running — the button stays green while the service is alive.</string>
+    <string name="dot_says_off">Shizuku is not running — the button is red and the helper keeps retrying until it starts.</string>
+    <string name="service_running">Helper service running</string>
+    <string name="service_stopped">Helper service stopped</string>
+    <string name="attempts">Attempts this round: %1$d</string>
+    <string name="next_attempt">Next attempt in %1$ds</string>
+
+    <string name="section_managers">Detected Shizuku apps</string>
+    <string name="managers_none">No Shizuku app detected. Install original Shizuku, Shizuku Next, Shizuku+ or any Shizuku-compatible fork.</string>
+    <string name="managers_sui">Sui (Magisk module) detected. It provides the Shizuku binder itself, so there is no app to start.</string>
+    <string name="mode_automatic">automatic start</string>
+    <string name="mode_token">automatic start once a token is saved</string>
+    <string name="mode_manual">no start entry point · open it manually</string>
+    <string name="mode_sui">binder provided by the Magisk module</string>
+
+    <string name="section_automation">Automation</string>
+    <string name="auto_restart">Auto restart after unlock</string>
+    <string name="auto_restart_desc">Watches every unlock and keeps asking your Shizuku app to start until the service answers.</string>
+    <string name="watcher_title">Watcher</string>
+    <string name="watcher_desc">Keep this on if you want the helper to also nudge your Shizuku app\'s own watchdog on every retry. Turn it off if you prefer this app to do the whole restart by itself.</string>
+    <string name="watcher_switch">Also wake Shizuku\'s watchdog on each retry (no token needed)</string>
+    <string name="wake_watcher">Wake the watcher now</string>
+
+    <string name="token_title">Auth token</string>
+    <string name="token_desc">Only for forks that require a token for the START intent. Copy it from the app\'s automation or Intents screen. Leave empty for original Shizuku, Sui or forks that need no token.</string>
+    <string name="token_hint">Paste token</string>
+    <string name="save_token">Save token</string>
+
+    <string name="start_helper">Start helper now</string>
+    <string name="open_manager">Open the Shizuku app</string>
+    <string name="disable_battery">Disable Battery Restrictions</string>
+
+    <string name="helper_started">Helper started</string>
+    <string name="helper_stopped">Helper stopped</string>
+    <string name="token_saved">Token saved</string>
+    <string name="saved">Saved</string>
+    <string name="waking_watcher">Waking the watcher…</string>
+    <string name="watcher_woken">Watcher woken</string>
+    <string name="watcher_failed">Could not wake the watcher</string>
+    <string name="no_watchdog">No Shizuku app with a watchdog found</string>
+    <string name="no_manager">No Shizuku app found</string>
+    <string name="battery_already">Battery restrictions are already disabled</string>
+    <string name="battery_open">Allow this app in the battery settings</string>
+    <string name="battery_disabled">Battery restrictions disabled</string>
+</resources>

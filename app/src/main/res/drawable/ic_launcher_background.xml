@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Background layer of the adaptive launcher icon.
+
+    Shizuku's own mark lives on an indigo "blueprint" field. This layer keeps
+    that family look: a deep indigo that lifts into electric blue, a soft bloom
+    of light from the upper left, the faint measured grid, and a gentle vignette
+    that darkens the outer edge. The gradient, bloom and vignette give the square
+    depth once it is masked into a circle or squircle.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Base wash: midnight indigo into electric blue. -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="106"
+                android:endY="108"
+                android:startX="2"
+                android:startY="0"
+                android:type="linear">
+                <item
+                    android:color="#FF080D2A"
+                    android:offset="0.0" />
+                <item
+                    android:color="#FF17255F"
+                    android:offset="0.34" />
+                <item
+                    android:color="#FF2C48AE"
+                    android:offset="0.68" />
+                <item
+                    android:color="#FF5B7CFF"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Light bloom from the upper left. -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="34"
+                android:centerY="24"
+                android:gradientRadius="74"
+                android:type="radial">
+                <item
+                    android:color="#52BED2FF"
+                    android:offset="0.0" />
+                <item
+                    android:color="#1A87A6FF"
+                    android:offset="0.5" />
+                <item
+                    android:color="#00000000"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Faint blueprint grid, as on the Shizuku mark. -->
+    <path
+        android:pathData="M12,0V108 M24,0V108 M36,0V108 M48,0V108 M60,0V108 M72,0V108 M84,0V108 M96,0V108"
+        android:strokeColor="#0EFFFFFF"
+        android:strokeWidth="0.6" />
+    <path
+        android:pathData="M0,12H108 M0,24H108 M0,36H108 M0,48H108 M0,60H108 M0,72H108 M0,84H108 M0,96H108"
+        android:strokeColor="#0EFFFFFF"
+        android:strokeWidth="0.6" />
+
+    <!-- Vignette: keeps the middle open and deepens the edge. -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="78"
+                android:type="radial">
+                <item
+                    android:color="#00040A1F"
+                    android:offset="0.52" />
+                <item
+                    android:color="#73040A1F"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
