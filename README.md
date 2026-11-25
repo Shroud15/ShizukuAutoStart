@@ -19,6 +19,16 @@ the installed manager is discovered at runtime instead of being hard-coded.
 
 ---
 
+## Screenshots
+
+| Main screen | Automation, watchdog and token |
+|:---:|:---:|
+| <img src="docs/screenshots/main.png" width="280" alt="Main screen: Shizuku service running and the detected manager" /> | <img src="docs/screenshots/automation-and-token.png" width="280" alt="Automation switch, watcher options and the optional auth token card" /> |
+| **Light theme** | **Built-in guide** |
+| <img src="docs/screenshots/light-theme.png" width="280" alt="The same screen rendered in the light theme" /> | <img src="docs/screenshots/how-to-use.png" width="280" alt="The built-in How to use guide" /> |
+
+---
+
 ## The problem
 
 On many phones the Shizuku server dies while the device is locked (wireless-debugging
@@ -173,6 +183,7 @@ app/
 build.gradle              top-level plugin versions
 settings.gradle           module and repository configuration
 .github/workflows/        CI: builds both APKs and attaches them to v* releases
+docs/screenshots/         README screenshots, captured on a real device
 ```
 
 ## Troubleshooting
