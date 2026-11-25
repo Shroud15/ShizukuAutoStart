@@ -1,5 +1,9 @@
 # Shizuku Auto Start
 
+<p align="center">
+  <img src="docs/screenshots/00-banner.png" width="100%" alt="Shizuku Auto Start — keeps a Shizuku-compatible manager running after lock and unlock, with no root required" />
+</p>
+
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
 ![Platform: Android 8.0+](https://img.shields.io/badge/platform-Android%208.0%2B-green.svg)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-purple.svg)
@@ -183,7 +187,7 @@ app/
 build.gradle              top-level plugin versions
 settings.gradle           module and repository configuration
 .github/workflows/        CI: builds both APKs and attaches them to v* releases
-docs/screenshots/         README screenshots, captured on a real device
+docs/screenshots/         README banner and screenshots, captured on a real device
 ```
 
 ## Troubleshooting
